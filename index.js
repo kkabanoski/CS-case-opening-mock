@@ -107,6 +107,9 @@ const items = [
     }
 ]
 
+
+
+
 function getRandomInt() {
     return Math.random()
 }
@@ -141,23 +144,31 @@ function renderItems() {
 }
 renderItems()
 
+let itemDropped = ''
 
 function randomRarity() {
         if (randomNumber <= 0.0026){
             console.log("Gold" + randomNumber)
+            itemDropped = "Gold"
 
         }else if (randomNumber <= 0.0064){
             console.log("Covert" + randomNumber)
+            itemDropped = "Covert"
         }else if (randomNumber <= 0.0320){
             console.log("Classified")
+            itemDropped = "Classified"
         }else if (randomNumber <= 0.1598){
             console.log("Restricted" + randomNumber)
+            itemDropped = "Restricted"
         }else {
             console.log("Mil-spec" + randomNumber)
+            itemDropped = "Mil-Spec"
         }
 }
 
 function randomSkin(rarity) {
-    return items.filter(rarity)
-} //  zobaczyć jak działa .filter
+    for (let i = 0; i < items.length; i++) {
+
+    }
+}
 
